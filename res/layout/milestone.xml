@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#f8f4e5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/date_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="date"
+            android:inputType="date" >
+
+            <requestFocus />
+        </EditText>
+
+        <ListView
+            android:id="@+id/milestone_list"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" >
+
+        </ListView>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editText1"
+            android:onClick="createTask"
+            android:text="@string/submit_button" />
+
+        <EditText
+            android:id="@+id/milestone_input"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/submit_button"
+            android:layout_alignBottom="@+id/submit_button"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="submit milestone"
+            android:inputType="text" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
