@@ -108,7 +108,9 @@ public class MilestoneActivity extends Activity implements OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		Diary entry = mAdapter.getItem(position);
+		//Diary date = mAdapter.getItem(position);
 		TextView taskDescription = (TextView) view.findViewById(R.id.milestone_entry);
+		//TextView dateText = (TextView) view.findViewById(R.id.date_entry);
 
 		entry.setCompleted(!entry.isCompleted());
 

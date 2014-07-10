@@ -14,12 +14,13 @@ import android.widget.TextView;
 
 public class EntryAdapter extends ArrayAdapter<Diary> {
 	private Context context;
-	private List<Diary> milestoneENTRY;
+	private List<Diary> milestoneENTRY;//, dateENTRY;
 	
 	public EntryAdapter(Context context, List<Diary> objects) {
 		super(context, R.layout.milestonelist, objects);
 		this.context = context;
 		this.milestoneENTRY = objects;
+		//this.dateENTRY = objects;
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent){
@@ -29,10 +30,13 @@ public class EntryAdapter extends ArrayAdapter<Diary> {
 		}
 		
 		Diary task = milestoneENTRY.get(position);
+		//Diary date = dateENTRY.get(position);
 		
 		TextView milestoneView = (TextView) convertView.findViewById(R.id.milestone_entry);
+		//TextView dateView = (TextView) convertView.findViewById(R.id.date_entry);
 		
 		milestoneView.setText(task.getDescription());
+		//dateView.setText(date.getDescription());
 		
 		if(task.isCompleted()){
 			milestoneView.setPaintFlags(milestoneView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
