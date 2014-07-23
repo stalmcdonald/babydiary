@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
+        android:minSdkVersion="16"
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -28,26 +28,18 @@
         </activity>
         
         <activity
-            android:name="com.cm.babydiary.MainActivity"
-            android:label="@string/log"
-            android:parentActivityName="MilestoneActivity"
-            android:screenOrientation="portrait">  
+            android:name="com.cm.babydiary.DiaryEditActivity"
+            android:label="@string/title_activity_login" 
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
         </activity>
-        
         
         <activity
             android:name="com.cm.babydiary.UserActivity"
-            android:label="@string/log"
-            android:parentActivityName="MilestoneActivity"
-            android:screenOrientation="portrait">  
+            android:label="@string/title_activity_login" 
+            android:windowSoftInputMode="adjustResize">
         </activity>
-        
-        <activity
-            android:name="com.cm.babydiary.SignUpActivity"
-            android:label="@string/sign"
-            android:parentActivityName="MilestoneActivity"
-            android:screenOrientation="portrait">  
-        </activity>
+		
+        <service android:name="com.parse.PushService" />
     </application>
 
 </manifest>
